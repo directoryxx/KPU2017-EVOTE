@@ -34,15 +34,15 @@ class LoginController extends Controller
      */
     public function username()
     {
-         return 'username';
+        return 'username';
     }
 
     public function authenticate()
     {
-       if (Auth::attempt(['email' => $email, 'password' => $password, 'status' => 'A'])) {
-           // Authentication passed...
-           return redirect()->intended('home');
-       }
+        if (Auth::attempt(['email' => $email, 'password' => $password, 'status' => 'A'])) {
+            // Authentication passed...
+            return redirect()->intended('home');
+        }
     }
 
     public function __construct()
